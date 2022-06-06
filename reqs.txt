@@ -8,7 +8,7 @@ nerd-fonts-jetbrains-mono
 
 
 # shell
-zsh nvim
+zsh nvim dash
 
 
 # remote desktop
