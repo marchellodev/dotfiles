@@ -1,12 +1,19 @@
 # dotfiles & software management
 stow yay
 
+
 # desktop env
 sway bemenu
 nerd-fonts-jetbrains-mono	
 
+
 # shell
 zsh nvim
+
+
+# remote desktop
+wayvnc tigervnc
+
 
 # tablet mode
 squeekboard
