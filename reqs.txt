@@ -1,8 +1,9 @@
-# dotfiles management
-stow
+# dotfiles & software management
+stow yay
 
 # desktop env
 sway bemenu
+nerd-fonts-jetbrains-mono	
 
 # shell
 zsh nvim
