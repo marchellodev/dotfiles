@@ -1,1 +1,12 @@
-zsh antigen
+# dotfiles management
+stow
+
+# desktop env
+sway bemenu
+
+# shell
+zsh nvim
+
+# tablet mode
+squeekboard
+
