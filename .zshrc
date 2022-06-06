@@ -15,7 +15,7 @@ autoload -Uz compinit promptinit
 compinit
 # End of lines added by compinstall
 
-. ~/_tools/antidote/antidote.zsh
+. ~/dotfiles/_tools/antidote/antidote.zsh
 antidote load
 
 
