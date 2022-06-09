@@ -17,6 +17,7 @@ bindsym XF86Search exec bemenu-run
 exec mako
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec cbatticon
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # exec_always pkill kanshi; exec kanshi
 

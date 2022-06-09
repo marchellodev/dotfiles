@@ -4,6 +4,7 @@ stow yay
 
 # desktop env
 sway bemenu mako
+polkit polkit-gnome
 nerd-fonts-jetbrains-mono	
 
 
