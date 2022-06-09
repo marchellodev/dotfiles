@@ -24,6 +24,8 @@ export PATH=$PATH:$HOME/go/bin
 export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 export XDG_CURRENT_DESKTOP=sway
 
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 eval $(ssh-agent)
 ssh-add ~/.ssh/*
 # source "/home/mark/Playground/emsdk/emsdk_env.sh"

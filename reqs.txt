@@ -3,7 +3,7 @@ stow yay
 
 
 # desktop env
-sway bemenu
+sway bemenu mako
 nerd-fonts-jetbrains-mono	
 
 
@@ -14,6 +14,9 @@ zsh nvim dash
 # remote desktop
 wayvnc tigervnc
 
+
+# battery
+cbatticon tlp
 
 # tablet mode
 squeekboard
