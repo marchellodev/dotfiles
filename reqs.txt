@@ -22,3 +22,11 @@ cbatticon tlp
 # tablet mode
 squeekboard
 
+
+
+# todo things to add:
+> status bar
+> hide status bar by default
+> screen sharing tools
+> gnome & kde themes
+
