@@ -29,4 +29,5 @@ squeekboard
 > hide status bar by default
 > screen sharing tools
 > gnome & kde themes
+> zsh extensions
 
