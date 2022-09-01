@@ -1,0 +1,103 @@
+""" Map leader to space
+
+let mapleader=" "
+nnoremap <leader>si :source ~/.ideavimrc<CR>
+
+
+""" Plugins
+set which-key
+
+
+""" Plugin settings
+" let g:argtextobj_pairs="[:],(:),<:>"
+" set timeoutlen=5000
+
+
+""" common settings
+
+set scrolloff=5
+set incsearch
+set number
+
+
+""" Idea specific settings
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" view management & interface (v2.0)
+map <leader>vt <Action>(ViewToolButtons)
+map <leader>vm <Action>(ViewMainMenu)
+map <leader>vs <Action>(ViewStatusBar)
+map <leader>vn <Action>(ViewNavigationBar)
+
+map <leader>im <Action>(MainMenu)
+map <leader>in <Action>(MainToolBar)
+
+map <leader>on <Action>(ActivateNotificationsToolWindow)
+map <leader>ot <Action>(ActivateTerminalToolWindow)
+map <leader>or <Action>(ActivateRunToolWindow)
+map <leader>od <Action>(ActivateDebugToolWindow)
+map <leader>op <Action>(ActivateProjectToolWindow)
+map <leader>og <Action>(ActivateVersionControlToolWindow)
+map <leader>od <Action>(ActivateDatabaseToolWindow)
+
+" Use Shift + Esc to close the current window
+
+
+
+
+""" Idea navigation
+" Tabs
+map <S-h> <Action>(PreviousTab)
+map <S-l> <Action>(NextTab)
+map <S-x> <Action>(CloseEditor)
+" todo move tabs
+" todo move tabs across splits
+" todo new tab ?
+
+" Splits
+" Ctrl + Tab can be used to switch between splits
+map <C-l> <Action>(PrevSplitter)
+map <C-h> <Action>(NextSplitter)
+map <C-j> <Action>(SplitHorizontally)
+map <C-k> <Action>(SplitVertically)
+map <C-k> <Action>(SplitVertically)
+
+" Search
+noremap <leader>ff <Action>(Find)
+noremap <leader>fe <Action>(FindInPath)
+noremap <leader>fp <Action>(SearchEverywhere)
+
+" Files
+noremap <leader>fr <Action>(RecentFiles)
+
+" Functions (git, etc)
+" Inside the code (go to)
+
+" Idea formatting
+" Idea refactoring (+ extract)
+" Idea collapsing
+
+" System clipboard
+" LSP
+" GIT (revert, etc)
+
+" Building testing debugging
+
+
+
+" map <leader>d <Action>(Debug)
+map <leader>r <Action>(RefactoringMenu)
+" map <leader>c <Action>(Stop)
+map <leader>iz <Action>(ToggleDistractionFreeMode)
+
+" map <leader>s <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <S-Space> <Action>(GotoNextError)
+
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
+
+

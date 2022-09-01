@@ -22,3 +22,5 @@ antidote load
 export PS1='%1d> '
 
 
+source ~/.env
+
