@@ -27,20 +27,26 @@ set idearefactormode=keep
 
 """ view management & interface (v2.0)
 map <leader>vt <Action>(ViewToolButtons)
-map <leader>vm <Action>(ViewMainMenu)
+map <leader>vm <Action>(ViewMainMen)
 map <leader>vs <Action>(ViewStatusBar)
 map <leader>vn <Action>(ViewNavigationBar)
+map <leader>vz <Action>(ToggleDistractionFreeMode)
+map <leader>vp <Action>(TogglePresentationMode)
 
 map <leader>im <Action>(MainMenu)
-map <leader>in <Action>(MainToolBar)
+map <leader>it <Action>(MainToolBar)
 
+" todo remap Shift + Esc to a normal vim command
 map <leader>on <Action>(ActivateNotificationsToolWindow)
 map <leader>ot <Action>(ActivateTerminalToolWindow)
 map <leader>or <Action>(ActivateRunToolWindow)
 map <leader>od <Action>(ActivateDebugToolWindow)
+" todo consider using nerd tree plugin instead
 map <leader>op <Action>(ActivateProjectToolWindow)
 map <leader>og <Action>(ActivateVersionControlToolWindow)
 map <leader>od <Action>(ActivateDatabaseToolWindow)
+map <leader>oc <Action>(ActivateCommitToolWindow)
+
 
 " Use Shift + Esc to close the current window
 
@@ -80,6 +86,7 @@ noremap <leader>fr <Action>(RecentFiles)
 " Idea collapsing
 
 " System clipboard
+
 " LSP
 " GIT (revert, etc)
 
@@ -90,7 +97,6 @@ noremap <leader>fr <Action>(RecentFiles)
 " map <leader>d <Action>(Debug)
 map <leader>r <Action>(RefactoringMenu)
 " map <leader>c <Action>(Stop)
-map <leader>iz <Action>(ToggleDistractionFreeMode)
 
 " map <leader>s <Action>(SelectInProjectView)
 map <leader>a <Action>(Annotate)
@@ -98,6 +104,6 @@ map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 map <S-Space> <Action>(GotoNextError)
 
 map <leader>b <Action>(ToggleLineBreakpoint)
-map <leader>o <Action>(FileStructurePopup)
+" map <leader>o <Action>(FileStructurePopup)
 
 

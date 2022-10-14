@@ -25,9 +25,12 @@ sudo pacman -S --needed zsh zsh-completions neovim dash
 chsh -s /usr/bin/zsh
 
 # The fonts
+# TODO INSTALL NOTO FONTS
 yay nerd-fonts-jetbrains-mono
 
 # Position all the dotfiles
+# todo first install the stow
+sudo pacman -S --needed stow
 stow .
 
 
