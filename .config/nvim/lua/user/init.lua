@@ -5,12 +5,16 @@
 -- You can think of a Lua "table" as a dictionary like data structure the
 -- normal format is "key = value". These also handle array like data structures
 -- where a value with no key simply has an implicit numeric key
+
+vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+
+
 local config = {
 
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
-    channel = "nightly", -- "stable" or "nightly"
+    channel = "stable", -- "stable" or "nightly"
     version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
     branch = "main", -- branch name (NIGHTLY ONLY)
     commit = nil, -- commit hash (NIGHTLY ONLY)
@@ -27,7 +31,7 @@ local config = {
   },
 
   -- Set colorscheme to use
-  colorscheme = "default_theme",
+  colorscheme = "catppuccin",
 
   -- Add highlight groups in any theme
   highlights = {
@@ -43,7 +47,7 @@ local config = {
   options = {
     opt = {
       -- set to true or false etc.
-      relativenumber = true, -- sets vim.opt.relativenumber
+      relativenumber = false, -- sets vim.opt.relativenumber
       number = true, -- sets vim.opt.number
       spell = false, -- sets vim.opt.spell
       signcolumn = "auto", -- sets vim.opt.signcolumn to auto
@@ -83,46 +87,46 @@ local config = {
   },
 
   -- Default theme configuration
-  default_theme = {
-    -- Modify the color palette for the default theme
-    colors = {
-      fg = "#abb2bf",
-      bg = "#1e222a",
-    },
-    highlights = function(hl) -- or a function that returns a new table of colors to set
-      local C = require "default_theme.colors"
-
-      hl.Normal = { fg = C.fg, bg = C.bg }
-
-      -- New approach instead of diagnostic_style
-      hl.DiagnosticError.italic = true
-      hl.DiagnosticHint.italic = true
-      hl.DiagnosticInfo.italic = true
-      hl.DiagnosticWarn.italic = true
-
-      return hl
-    end,
-    -- enable or disable highlighting for extra plugins
-    plugins = {
-      aerial = true,
-      beacon = false,
-      bufferline = true,
-      dashboard = true,
-      highlighturl = true,
-      hop = false,
-      indent_blankline = true,
-      lightspeed = false,
-      ["neo-tree"] = true,
-      notify = true,
-      ["nvim-tree"] = false,
-      ["nvim-web-devicons"] = true,
-      rainbow = true,
-      symbols_outline = false,
-      telescope = true,
-      vimwiki = false,
-      ["which-key"] = true,
-    },
-  },
+  -- default_theme = {
+  --   -- Modify the color palette for the default theme
+  --   colors = {
+  --     fg = "#abb2bf",
+  --     bg = "#1e222a",
+  --   },
+  --   highlights = function(hl) -- or a function that returns a new table of colors to set
+  --     local C = require "default_theme.colors"
+  --
+  --     hl.Normal = { fg = C.fg, bg = C.bg }
+  --
+  --     -- New approach instead of diagnostic_style
+  --     hl.DiagnosticError.italic = true
+  --     hl.DiagnosticHint.italic = true
+  --     hl.DiagnosticInfo.italic = true
+  --     hl.DiagnosticWarn.italic = true
+  --
+  --     return hl
+  --   end,
+  --   -- enable or disable highlighting for extra plugins
+  --   plugins = {
+  --     aerial = true,
+  --     beacon = false,
+  --     bufferline = true,
+  --     dashboard = true,
+  --     highlighturl = true,
+  --     hop = false,
+  --     indent_blankline = true,
+  --     lightspeed = false,
+  --     ["neo-tree"] = true,
+  --     notify = true,
+  --     ["nvim-tree"] = false,
+  --     ["nvim-web-devicons"] = true,
+  --     rainbow = true,
+  --     symbols_outline = false,
+  --     telescope = true,
+  --     vimwiki = false,
+  --     ["which-key"] = true,
+  --   },
+  -- },
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -134,10 +138,10 @@ local config = {
   lsp = {
     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+      "dartls"
     },
     formatting = {
-      format_on_save = true, -- enable or disable auto formatting on save
+      format_on_save = false, -- enable or disable auto formatting on save
       disabled = { -- disable formatting capabilities for the listed clients
         -- "sumneko_lua",
       },
@@ -209,6 +213,9 @@ local config = {
       -- You can also add new plugins here as well:
       -- Add plugins, the packer syntax without the "use"
       -- { "andweeb/presence.nvim" },
+      { "catppuccin/nvim" },
+      { "ggandor/leap.nvim" },
+
       -- {
       --   "ray-x/lsp_signature.nvim",
       --   event = "BufRead",
@@ -298,6 +305,8 @@ local config = {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    require('leap').add_default_mappings()
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
