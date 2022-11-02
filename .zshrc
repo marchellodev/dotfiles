@@ -24,3 +24,8 @@ export PS1='%1d> '
 
 source ~/.env
 
+
+# pnpm
+export PNPM_HOME="/home/mark/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

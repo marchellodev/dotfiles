@@ -52,6 +52,7 @@ local config = {
       spell = false, -- sets vim.opt.spell
       signcolumn = "auto", -- sets vim.opt.signcolumn to auto
       wrap = false, -- sets vim.opt.wrap
+      updatetime = 50, -- did not really notice a difference
     },
     g = {
       mapleader = " ", -- sets vim.g.mapleader
@@ -142,6 +143,7 @@ local config = {
     },
     formatting = {
       format_on_save = false, -- enable or disable auto formatting on save
+      async = true,
       disabled = { -- disable formatting capabilities for the listed clients
         -- "sumneko_lua",
       },
@@ -215,6 +217,7 @@ local config = {
       -- { "andweeb/presence.nvim" },
       { "catppuccin/nvim" },
       { "ggandor/leap.nvim" },
+      { "mg979/vim-visual-multi" },
 
       -- {
       --   "ray-x/lsp_signature.nvim",
