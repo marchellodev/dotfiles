@@ -145,7 +145,7 @@ local config = {
       format_on_save = false, -- enable or disable auto formatting on save
       async = true,
       disabled = { -- disable formatting capabilities for the listed clients
-        -- "sumneko_lua",
+        "tsserver",
       },
       -- filter = function(client) -- fully override the default formatting function
       --   return true
