@@ -218,6 +218,7 @@ local config = {
       { "catppuccin/nvim" },
       { "ggandor/leap.nvim" },
       { "mg979/vim-visual-multi" },
+      { "github/copilot.vim" },
 
       -- {
       --   "ray-x/lsp_signature.nvim",
